@@ -1,0 +1,847 @@
+本MIS系统。功能是模拟完成地铁站的售票
+这次MIS系统的制作对个人的帮助还是很大的。对一个大型的工程项目有了一个初步的了解，另外对于软件的设计也有了进一步的认识。（差劲的设计对于二次开发简直就是噩梦，先前改过一个MIS的代码，太痛苦了。我的设计还是挺好的，至少在补充功能的时候没有对代码进行很大的改动，而只是在相应的地方增加了相应的代码）
+ 
+MySQL部分：
+这里只给出一部分SQL语句了
+[sql] view plaincopyprint?
+drop table trainsys;  
+  
+CREATE TABLE trainsys (  
+  name  VARCHAR(30) NOT NULL,  
+  password  VARCHAR(32)   NOT NULL,  
+  balance   INT     NOT NULL  
+);  
+  
+CREATE TABLE road (  
+  id INT AUTO_INCREMENT PRIMARY KEY,  
+  station VARCHAR(10)  NOT NULL,  
+  region INT NOT NULL  
+);  
+  
+CREATE TABLE recoder (  
+  name  VARCHAR(30) NOT NULL,  
+  date DATE NOT NULL  
+);  
+  
+set names gbk;  
+  
+INSERT INTO trainsys(name,password,balance) VALUES ('white',1,100);  
+  
+INSERT INTO road(station,region) VALUES ('上海南站',1);  
+INSERT INTO road(station,region) VALUES ('徐家汇',3);  
+  
+INSERT INTO recoder(name,date) VALUES ('white', '2010-03-03');  
+ 
+对于整个MIS系统来说，首先是个主界面，我这里用TrainFrame.java命名
+[java] view plaincopyprint?
+package com.white;  
+  
+import com.white.dao.*;  
+import com.white.login.*;  
+import com.white.others.*;  
+  
+import java.awt.BorderLayout;  
+import java.awt.Color;  
+import java.awt.Font;  
+import java.awt.GridLayout;  
+import java.awt.event.ActionEvent;  
+import java.awt.event.ActionListener;  
+  
+import javax.swing.ImageIcon;  
+import javax.swing.JButton;  
+import javax.swing.JFrame;  
+import javax.swing.JLabel;  
+import javax.swing.JPanel;  
+import javax.swing.JTextField;  
+  
+public class TrainFrame {  
+    private static JFrame frame;  
+    private static JPanel panel1, panel2, panel3;  
+    private static JLabel label;  
+      
+    private static int price;  
+      
+    public TrainFrame() {  
+        //  
+    }  
+      
+    public TrainFrame(int price) {  
+        this.price = price;  
+    }  
+      
+    public static void showFrame(boolean flag) {  
+        frame = new JFrame("上海地铁系统");  
+        frame.getContentPane().setLayout(new BorderLayout());  
+        frame.setBackground(Color.WHITE);  
+          
+        panel1 = new JPanel(new GridLayout(1, 10, 2, 0));  
+        panel2 = new JPanel(new GridLayout(1, 2, 10, 0));  
+        panel3 = new JPanel(new GridLayout(2, 1, 0, 10));  
+          
+        ImageIcon img = new ImageIcon("train.jpg");  
+        label = new JLabel(img);  
+        frame.add(label);  
+          
+        JButton button[] = new JButton[11];  
+        Font wordStyle = new Font("微软雅黑", 1, 10);  
+        for(int i = 1; i <= 10; i++) {  
+            button[i] = new JButton("地铁" + i + "号线");  
+            button[i].setFont(wordStyle);  
+            button[i].setEnabled(flag);  
+            button[i].addActionListener(new ActionListener() {  
+                public void actionPerformed(ActionEvent e) {  
+                    TrainSelectFrame tsFrame = new TrainSelectFrame();  
+                    frame.dispose();  
+                    tsFrame.showFrame();  
+                }  
+            });  
+            panel1.add(button[i]);  
+        }  
+        frame.add(panel1, BorderLayout.SOUTH);  
+          
+        JButton bAddMoney = new JButton("充值");  
+        bAddMoney.setFont(wordStyle);  
+        bAddMoney.setEnabled(flag);  
+        bAddMoney.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                AddMoneyFrame amFrame = new AddMoneyFrame();  
+                frame.dispose();  
+                amFrame.showFrame();  
+            }  
+        });  
+          
+        final JButton bLogin;  
+        if(false == flag) {  
+            bLogin = new JButton("登录");  
+            price = 0;  
+        }  
+        else {  
+            bLogin = new JButton("欢迎使用");  
+            bLogin.setEnabled(false);  
+        }  
+          
+        bLogin.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(bLogin == e.getSource()) {  
+                    LoginFrame lgFrame = new LoginFrame();  
+                    frame.dispose();  
+                    lgFrame.showFrame();  
+                }  
+            }  
+        });  
+        final JButton bExit = new JButton("注销");  
+        bExit.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(bExit == e.getSource()) {  
+                    frame.dispose();  
+                    Dao.disconnect();  
+                    showFrame(false);  
+                }  
+            }  
+        });  
+        Font bBackStyle = new Font("微软雅黑", 1, 18);  
+        bLogin.setFont(bBackStyle);  
+        bAddMoney.setFont(bBackStyle);  
+        bExit.setFont(bBackStyle);  
+        panel2.add(bLogin);  
+        panel2.add(bAddMoney);  
+        panel2.add(bExit);  
+        frame.add(panel2, BorderLayout.NORTH);  
+          
+        JTextField tf1 = new JTextField("余额:" + Dao.getBalance());  
+        tf1.setFont(bBackStyle);  
+        tf1.setOpaque(false);  
+        tf1.setEditable(false);  
+        panel3.add(tf1);  
+        frame.add(panel3, BorderLayout.EAST);  
+          
+        frame.setBounds(100, 100, 900, 700);  
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        frame.setVisible(true);  
+    }  
+      
+    public static void main(String args[]) {  
+        showFrame(false);  
+    }  
+}  
+
+之后，为了便于管理，这里分了三个文件夹：dao(数据库操作)，login(登陆相关)，others(其他操作)。
+ 
+dao:
+对于数据库的初始化操作，我放在了static块中，而并不是放在构造里（这里就看个人的习惯吧）
+[java] view plaincopyprint?
+package com.white.dao;  
+  
+import java.sql.Date;  
+import java.sql.Statement;  
+import java.sql.Connection;  
+import java.sql.DriverManager;  
+import java.sql.PreparedStatement;  
+import java.sql.ResultSet;  
+import java.sql.SQLException;  
+  
+  
+public class Dao {  
+    public static final String DBDRIVER = "org.gjt.mm.mysql.Driver";  
+    public static final String DBURL = "jdbc:mysql://localhost:3306/white";  
+    public static final String DBUSER = "root";  
+    public static final String DBPASS = "*******";          // 此处为密码，我打*了  
+      
+    private static Connection conn = null;  
+    private static PreparedStatement pstmt = null;  
+    private static ResultSet rs = null;  
+    private static Statement stmt = null;  
+      
+    private static String nm = "";  
+    private static String password = "";  
+    private static int balance = 0;  
+    private static int pce_start, pce_end;  
+      
+    static {  
+        try {  
+            if(null == conn) {  
+                Class.forName(DBDRIVER);  
+                conn = DriverManager.getConnection(DBURL, DBUSER, DBPASS);  
+            }  
+        } catch (ClassNotFoundException e) {  
+            e.printStackTrace();  
+        } catch (SQLException e) {  
+            e.printStackTrace();  
+        }  
+    }  
+      
+    public static boolean login(String name, String pwd) {  
+        String sql = "SELECT name,password,balance FROM trainsys";  
+        try {  
+            pstmt = conn.prepareStatement(sql);  
+            rs = pstmt.executeQuery();  
+            while(rs.next()) {  
+                nm = rs.getString("name");  
+                password = rs.getString("password");  
+                balance = rs.getInt("balance");  
+                if(nm.equals(name) && password.equals(pwd)) {  
+                    return true;  
+                }  
+            }  
+            rs.close();  
+            pstmt.close();  
+            conn.close();  
+            return false;  
+        } catch (SQLException e) {  
+            e.printStackTrace();  
+        }  
+        return false;  
+    }  
+      
+    public static int getRegion(String sStation, String eStation) {  
+        String sql = "SELECT station,region FROM road WHERE station=? OR station=?";  
+        try {  
+            pstmt = conn.prepareStatement(sql);  
+            pstmt.setString(1, sStation);  
+            pstmt.setString(2, eStation);  
+            rs = pstmt.executeQuery();  
+            while(rs.next()) {  
+                String station = rs.getString("station");  
+                int region = rs.getInt("region");  
+                if(station.equals(sStation)) {  
+                    pce_start = region;  
+                }  
+                else {  
+                    pce_end = region;  
+                }  
+            }  
+            rs.close();  
+            pstmt.close();  
+        } catch (SQLException e) {  
+            e.printStackTrace();  
+        }  
+        int distance = Math.abs(pce_end-pce_start);  
+        if(distance > 6)  
+            return 3;  
+        else  
+            return 5;  
+    }  
+      
+    public static Date getRecoder() {  
+        String sql = "SELECT name,date FROM recoder WHERE name=?";  
+        Date date = null;  
+        try {  
+            pstmt = conn.prepareStatement(sql);  
+            pstmt.setString(1, nm);  
+            rs = pstmt.executeQuery();  
+            while(rs.next()) {  
+                String name = rs.getString("name");  
+                date = rs.getDate("date");  
+            }  
+            rs.close();  
+            pstmt.close();  
+        } catch (SQLException e) {  
+            e.printStackTrace();  
+        }  
+        return date;  
+    }  
+      
+    public static boolean disconnect() {  
+        try {  
+            conn.close();  
+        } catch (SQLException e) {  
+            e.printStackTrace();  
+        }  
+        return true;  
+    }  
+      
+    public static boolean subBalance(int subMoney) {  
+        balance -= subMoney;  
+        String sql = "UPDATE trainsys SET balance=? WHERE name=?";  
+        try {  
+            pstmt = conn.prepareStatement(sql);  
+            pstmt.setInt(1, balance);  
+            pstmt.setString(2, nm);  
+            pstmt.executeUpdate();  
+            pstmt.close();  
+        } catch (SQLException e) {  
+            e.printStackTrace();  
+        }  
+        return true;  
+    }  
+      
+    public static boolean addBalance(int subMoney) {  
+        balance += subMoney;  
+        String sql = "UPDATE trainsys SET balance=? WHERE name=?";  
+        try {  
+            pstmt = conn.prepareStatement(sql);  
+            pstmt.setInt(1, balance);  
+            pstmt.setString(2, nm);  
+            pstmt.executeUpdate();  
+            pstmt.close();  
+        } catch (SQLException e) {  
+            e.printStackTrace();  
+        }  
+        return true;  
+    }  
+      
+    public static int getPrice(String sStation, String eStation) {  
+        return getRegion(sStation, eStation);  
+    }  
+      
+    public static int getBalance() {  
+        try {  
+            if(conn.isClosed())  
+                return 0;  
+            else  
+                return balance;  
+        } catch (SQLException e) {  
+            e.printStackTrace();  
+        }  
+        return 0;  
+    }  
+}  
+ 
+ 
+login：
+这里就两个登陆的界面，放一个作为参考吧。
+ 
+[java] view plaincopyprint?
+package com.white.login;  
+  
+import java.awt.BorderLayout;  
+import java.awt.FlowLayout;  
+import java.awt.GridLayout;  
+import java.awt.Rectangle;  
+import java.awt.event.ActionEvent;  
+import java.awt.event.ActionListener;  
+  
+import javax.swing.JButton;  
+import javax.swing.JFrame;  
+import javax.swing.JLabel;  
+import javax.swing.JPanel;  
+import javax.swing.JPasswordField;  
+import javax.swing.JTextField;  
+  
+import com.white.*;  
+import com.white.dao.*;  
+  
+public class LoginFrame extends JFrame{  
+    private String name;  
+    private String password;  
+      
+    public LoginFrame() {  
+        name = "";  
+        password = "";  
+    }  
+      
+    public LoginFrame(String name, String password) {  
+        this.name = name;  
+        this.password = password;  
+    }  
+      
+    public String getName() {  
+        return name;  
+    }  
+      
+    public String getPassword() {  
+        return password;  
+    }  
+      
+    public void showFrame() {  
+        final JTextField jtfName;  
+        final JPasswordField jpfPwd;  
+        final JButton jbtOK, jbtCancle;  
+        JPanel jpLables = new JPanel();  
+        jpLables.setLayout(new GridLayout(2, 1));  
+        jpLables.add(new JLabel("??o?￡o"));  
+        jpLables.add(new JLabel("?ü??￡o"));  
+        jtfName = new JTextField(20);  
+        jtfName.setSize(50, 20);  
+        jpfPwd = new JPasswordField(20);  
+        jpfPwd.setSize(20, 20);  
+        JPanel jpTextFields = new JPanel();  
+        jpTextFields.setLayout(new GridLayout(2, 1));  
+        jpTextFields.add(jtfName);  
+        jpTextFields.add(jpfPwd);  
+   
+        JPanel p1 = new JPanel();  
+        p1.setLayout(new BorderLayout());  
+        p1.add(jpLables, BorderLayout.WEST);  
+        p1.add(jpTextFields, BorderLayout.CENTER);  
+    
+        JPanel p2 = new JPanel();  
+        p2.setLayout(new FlowLayout(FlowLayout.CENTER));  
+        p2.add(jbtOK = new JButton("è·?¨"));  
+        p2.add(jbtCancle = new JButton("oóí?"));  
+          
+        jbtOK.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtOK == e.getSource()) {  
+                    String judgeName, judgePwd;  
+                    judgeName = jtfName.getText();  
+                    judgePwd = new String(jpfPwd.getPassword());  
+                    boolean retval =  Dao.login(judgeName, judgePwd);  
+                    if(true == retval) {  
+                        LoginFrame.this.dispose();  
+                        new TrainFrame().showFrame(true);   
+                    }  
+                    else {  
+                        new MessageFrame().showFrame();  
+                        jtfName.setText("");  
+                        jpfPwd.setText("");  
+                    }  
+                }  
+            }   
+        });  
+          
+        jbtCancle.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtCancle == e.getSource()) {  
+                    LoginFrame.this.dispose();  
+                    new TrainFrame().showFrame(false);  
+                }  
+            }  
+        });  
+    
+        getContentPane().setLayout(null);  
+        p1.setBounds(new Rectangle(200,150,300,80));  
+        getContentPane().add(p1,null);  
+        p2.setBounds(new Rectangle(200,250,300,80));  
+        getContentPane().add(p2,null);  
+        setSize(700, 500);  
+        setLocation(200, 200);  
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        setVisible(true);  
+    }  
+}  
+
+others：
+java代码较多(太多，只放出一部分)
+AddMoneyFrame.java
+[java] view plaincopyprint?
+package com.white.others;  
+  
+import java.awt.BorderLayout;  
+import java.awt.FlowLayout;  
+import java.awt.GridLayout;  
+import java.awt.Rectangle;  
+import java.awt.event.ActionEvent;  
+import java.awt.event.ActionListener;  
+import java.sql.Date;  
+  
+import javax.swing.JButton;  
+import javax.swing.JFrame;  
+import javax.swing.JLabel;  
+import javax.swing.JPanel;  
+import javax.swing.JTextField;  
+  
+import com.white.TrainFrame;  
+import com.white.dao.Dao;  
+  
+public class AddMoneyFrame extends JFrame {  
+    private String number;  
+    public void showFrame() {  
+        final JTextField jNum;  
+        final JButton jbtOK, jbtCheck, jbtCancle;  
+        JPanel jpLables = new JPanel();  
+        jpLables.setLayout(new GridLayout(1, 1));  
+        jpLables.add(new JLabel("充值数额："));  
+        jNum = new JTextField(20);  
+        jNum.setSize(20, 20);  
+        JPanel jpTextFields = new JPanel();  
+        jpTextFields.setLayout(new GridLayout(1, 1));  
+        jpTextFields.add(jNum);  
+   
+        JPanel p1 = new JPanel();  
+        p1.setLayout(new BorderLayout());  
+        p1.add(jpLables, BorderLayout.WEST);  
+        p1.add(jpTextFields, BorderLayout.CENTER);  
+    
+        JPanel p2 = new JPanel();  
+        p2.setLayout(new FlowLayout(FlowLayout.CENTER));  
+        p2.add(jbtOK = new JButton("充值"));  
+        p2.add(jbtCheck = new JButton("查询最近一次记录"));  
+        p2.add(jbtCancle = new JButton("后退"));  
+          
+        jbtOK.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtOK == e.getSource()) {  
+                    number = jNum.getText();  
+                    int num = Integer.parseInt(number);  
+                    Dao.addBalance(num);  
+                    AddMoneyFrame.this.dispose();  
+                    new TrainFrame().showFrame(true);  
+                }  
+            }   
+        });  
+          
+        jbtCheck.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtCheck == e.getSource()) {  
+                    Date date = Dao.getRecoder();  
+                    AddMoneyFrame.this.dispose();  
+                    new CheckRecoderFrame(date).showFrame();  
+                }  
+            }  
+        });  
+          
+        jbtCancle.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtCancle == e.getSource()) {  
+                    AddMoneyFrame.this.dispose();  
+                    new TrainFrame().showFrame(true);  
+                }  
+            }  
+        });  
+    
+        getContentPane().setLayout(null);  
+        p1.setBounds(new Rectangle(200,150,300,80));  
+        getContentPane().add(p1,null);  
+        p2.setBounds(new Rectangle(200,250,300,80));  
+        getContentPane().add(p2,null);  
+        setSize(700, 500);  
+        setLocation(200, 200);  
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        setVisible(true);  
+    }  
+}  
+
+CheckRecoderFrame.java
+[java] view plaincopyprint?
+package com.white.others;  
+  
+import java.awt.BorderLayout;  
+import java.awt.FlowLayout;  
+import java.awt.GridLayout;  
+import java.awt.Rectangle;  
+import java.awt.event.ActionEvent;  
+import java.awt.event.ActionListener;  
+import java.sql.Date;  
+import java.text.DateFormat;  
+import java.text.SimpleDateFormat;  
+  
+import javax.swing.JButton;  
+import javax.swing.JFrame;  
+import javax.swing.JLabel;  
+import javax.swing.JPanel;  
+import javax.swing.JTextField;  
+  
+import com.white.TrainFrame;  
+import com.white.dao.Dao;  
+  
+public class CheckRecoderFrame extends JFrame {  
+    private Date date;  
+    private String strDate;  
+    private DateFormat dformat;  
+      
+    public CheckRecoderFrame(Date date) {  
+        this.date = date;  
+        dformat = new SimpleDateFormat("yyyy-MM-dd");  
+    }  
+      
+    public void showFrame() {  
+        final JTextField jRecoder;  
+        final JButton jbtOK, jbtCancle;  
+        JPanel jpLables = new JPanel();  
+        jpLables.setLayout(new GridLayout(1, 1));  
+        jpLables.add(new JLabel("最近一次记录："));  
+  
+        strDate = dformat.format(date);  
+        jRecoder = new JTextField(strDate);  
+        jRecoder.setSize(50, 20);  
+  
+        JPanel jpTextFields = new JPanel();  
+        jpTextFields.setLayout(new GridLayout(1, 1));  
+        jpTextFields.add(jRecoder);  
+  
+   
+        JPanel p1 = new JPanel();  
+        p1.setLayout(new BorderLayout());  
+        p1.add(jpLables, BorderLayout.WEST);  
+        p1.add(jpTextFields, BorderLayout.CENTER);  
+    
+        JPanel p2 = new JPanel();  
+        p2.setLayout(new FlowLayout(FlowLayout.CENTER));  
+        p2.add(jbtOK = new JButton("确定"));  
+        p2.add(jbtCancle = new JButton("后退"));  
+          
+        jbtOK.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtOK == e.getSource()) {  
+                    CheckRecoderFrame.this.dispose();  
+                    new TrainFrame().showFrame(true);  
+                }  
+            }   
+        });  
+          
+        jbtCancle.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtCancle == e.getSource()) {  
+                    CheckRecoderFrame.this.dispose();  
+                    new TrainFrame().showFrame(true);  
+                }  
+            }  
+        });  
+    
+        getContentPane().setLayout(null);  
+        p1.setBounds(new Rectangle(200,150,300,80));  
+        getContentPane().add(p1,null);  
+        p2.setBounds(new Rectangle(200,250,300,80));  
+        getContentPane().add(p2,null);  
+        setSize(700, 500);  
+        setLocation(200, 200);  
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        setVisible(true);  
+    }  
+}  
+
+TrainSelectFrame.java
+[java] view plaincopyprint?
+package com.white.others;  
+  
+import java.awt.BorderLayout;  
+import java.awt.FlowLayout;  
+import java.awt.GridLayout;  
+import java.awt.Rectangle;  
+import java.awt.event.ActionEvent;  
+import java.awt.event.ActionListener;  
+  
+import javax.swing.JButton;  
+import javax.swing.JFrame;  
+import javax.swing.JLabel;  
+import javax.swing.JPanel;  
+import javax.swing.JPasswordField;  
+import javax.swing.JTextField;  
+  
+import com.white.TrainFrame;  
+import com.white.dao.Dao;  
+import com.white.login.LoginFrame;  
+import com.white.others.TrainTradeFrame;;  
+  
+public class TrainSelectFrame extends JFrame {  
+    private String sStation, eStation, number;  
+      
+    public TrainSelectFrame() {  
+        //  
+    }  
+      
+    public void showFrame() {  
+        final JTextField jStart;  
+        final JTextField jEnd;  
+        final JTextField jNum;  
+        final JButton jbtOK, jbtCancle;  
+        JPanel jpLables = new JPanel();  
+        jpLables.setLayout(new GridLayout(3, 1));  
+        jpLables.add(new JLabel("起始站："));  
+        jpLables.add(new JLabel("终点站："));  
+        jpLables.add(new JLabel("购买张数"));  
+        jStart = new JTextField(20);  
+        jStart.setSize(50, 20);  
+        jEnd = new JTextField(20);  
+        jEnd.setSize(20, 20);  
+        jNum = new JTextField(20);  
+        jNum.setSize(20, 20);  
+        JPanel jpTextFields = new JPanel();  
+        jpTextFields.setLayout(new GridLayout(3, 1));  
+        jpTextFields.add(jStart);  
+        jpTextFields.add(jEnd);  
+        jpTextFields.add(jNum);  
+   
+        JPanel p1 = new JPanel();  
+        p1.setLayout(new BorderLayout());  
+        p1.add(jpLables, BorderLayout.WEST);  
+        p1.add(jpTextFields, BorderLayout.CENTER);  
+    
+        JPanel p2 = new JPanel();  
+        p2.setLayout(new FlowLayout(FlowLayout.CENTER));  
+        p2.add(jbtOK = new JButton("购买"));  
+        p2.add(jbtCancle = new JButton("后退"));  
+          
+        jbtOK.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtOK == e.getSource()) {  
+                    sStation = jStart.getText();  
+                    eStation = jEnd.getText();  
+                    number = jNum.getText();  
+                    int num = Integer.parseInt(number);  
+                    int price = Dao.getPrice(sStation, eStation) * num;  
+                    TrainTradeFrame ttFrame = new TrainTradeFrame(num, price, sStation, eStation);  
+                    ttFrame.showFrame();  
+                }  
+            }   
+        });  
+          
+        jbtCancle.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtCancle == e.getSource()) {  
+                    TrainSelectFrame.this.dispose();  
+                    new TrainFrame().showFrame(true);  
+                }  
+            }  
+        });  
+    
+        getContentPane().setLayout(null);  
+        p1.setBounds(new Rectangle(200,150,300,80));  
+        getContentPane().add(p1,null);  
+        p2.setBounds(new Rectangle(200,250,300,80));  
+        getContentPane().add(p2,null);  
+        setSize(700, 500);  
+        setLocation(200, 200);  
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        setVisible(true);  
+    }  
+}  
+ 
+ TrainTraderFrame.java
+[java] view plaincopyprint?
+package com.white.others;  
+  
+import java.awt.BorderLayout;  
+import java.awt.FlowLayout;  
+import java.awt.GridLayout;  
+import java.awt.Rectangle;  
+import java.awt.event.ActionEvent;  
+import java.awt.event.ActionListener;  
+  
+import javax.swing.JButton;  
+import javax.swing.JFrame;  
+import javax.swing.JLabel;  
+import javax.swing.JPanel;  
+import javax.swing.JTextArea;  
+import javax.swing.JTextField;  
+  
+import com.white.TrainFrame;  
+import com.white.dao.Dao;  
+import com.white.login.MessageFrame;  
+  
+public class TrainTradeFrame extends JFrame {  
+    private String strStation, strPrice;  
+    private JTextField tf;  
+    private JButton jbtBuy, jbtCancle;  
+    private JPanel panel;  
+    private int price, num;  
+    private String sStation;  
+    private String eStation;  
+      
+    public TrainTradeFrame() {  
+        //  
+    }  
+      
+    public TrainTradeFrame(int num, int price, String sStation, String eStation) {  
+        this.num = num;  
+        this.price = price;  
+        this.sStation = sStation;  
+        this.eStation = eStation;  
+    }  
+      
+    public void showFrame() {  
+        final JTextField jStart;  
+        final JTextField jEnd;  
+        final JTextField jPrice;  
+        final JTextField jNum;  
+        final JButton jbtOK, jbtCancle;  
+        JPanel jpLables = new JPanel();  
+        jpLables.setLayout(new GridLayout(4, 1));  
+        jpLables.add(new JLabel("起始站："));  
+        jpLables.add(new JLabel("终点站："));  
+        jpLables.add(new JLabel("价格："));  
+        jpLables.add(new JLabel("购买张数："));  
+        jStart = new JTextField(sStation);  
+        jStart.setSize(50, 20);  
+        jStart.setEditable(false);  
+        jEnd = new JTextField(eStation);  
+        jEnd.setSize(20, 20);  
+        jEnd.setEditable(false);  
+        jPrice = new JTextField("" + price);  
+        jPrice.setSize(20, 20);  
+        jPrice.setEditable(false);  
+        jNum = new JTextField("" + num);  
+        jNum.setSize(20, 20);  
+        jNum.setEditable(false);  
+        JPanel jpTextFields = new JPanel();  
+        jpTextFields.setLayout(new GridLayout(4, 1));  
+        jpTextFields.add(jStart);  
+        jpTextFields.add(jEnd);  
+        jpTextFields.add(jPrice);  
+        jpTextFields.add(jNum);  
+   
+        JPanel p1 = new JPanel();  
+        p1.setLayout(new BorderLayout());  
+        p1.add(jpLables, BorderLayout.WEST);  
+        p1.add(jpTextFields, BorderLayout.CENTER);  
+    
+        JPanel p2 = new JPanel();  
+        p2.setLayout(new FlowLayout(FlowLayout.CENTER));  
+        p2.add(jbtOK = new JButton("确定"));  
+        p2.add(jbtCancle = new JButton("后退"));  
+          
+        jbtOK.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtOK == e.getSource()) {  
+                    sStation = jStart.getText();  
+                    eStation = jEnd.getText();  
+                    int price = Dao.getPrice(sStation, eStation) * num;  
+                    Dao.subBalance(price);  
+                    TrainTradeFrame.this.dispose();  
+                }  
+            }   
+        });  
+          
+        jbtCancle.addActionListener(new ActionListener() {  
+            public void actionPerformed(ActionEvent e) {  
+                if(jbtCancle == e.getSource()) {  
+                    TrainTradeFrame.this.dispose();  
+                    new TrainFrame().showFrame(true);  
+                }  
+            }  
+        });  
+    
+        getContentPane().setLayout(null);  
+        p1.setBounds(new Rectangle(200,150,300,80));  
+        getContentPane().add(p1,null);  
+        p2.setBounds(new Rectangle(200,250,300,80));  
+        getContentPane().add(p2,null);  
+        setSize(700, 500);  
+        setLocation(200, 200);  
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        setVisible(true);  
+    }  
+}  
+
+ 

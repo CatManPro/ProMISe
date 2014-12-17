@@ -1,0 +1,58 @@
+//首先安装MySQL，VS2008
+//在VC++工程的.cpp文件上面加入下面代码部分：
+#include<winsock2.h>
+//定义socket
+#include"mysql.h"
+//#pragma comment( lib, "libmysql.lib");
+//此句话和在附加依赖项中增加libmysql.lib 的功能一样
+//工程属性中如下配置：
+//1、附加包含头文件mysql.h的目录，include就是mysql-5.0.27-win32\Include文件夹。
+//2、附加库目录，MySql lib中的文件就是mysql-5.0.27-win32\lib\opt中的文件
+//3、附加依赖项，名称为libmysql.lib
+//4、将libmysql.dll拷贝到debug文件夹中，libmysql.dll在lib文件夹中有
+//定义全局的SQL
+MYSQL mysql;
+
+mysql_init(&mysql);//初始化
+bool isConnected=mysql_real_connect(&mysql,"localhost","root","131015","firstsqldb",3306,0,0);//连
+if (isConnected)
+{
+    MessageBox(_T("success connected!"));
+    return;
+}
+else
+{
+    int i = mysql_errno(&mysql);//连接出错
+    const char * s = mysql_error(&mysql);
+    MessageBox(_T("failed to connect! Please check for your db service."));
+}
+mysql_close(&mysql);//关闭sql
+MYSQL_RES *result;
+MYSQL_ROW sql_row;
+MYSQL_FIELD *fd;
+int res=mysql_query(&mysql,"select * from mytable");//执行sql命令
+if(!res)
+{
+    result=mysql_store_result(&mysql);//保存查询到的数据到result
+    if(result)
+    {
+        int i,j;
+        for(i=0;fd=mysql_fetch_field(result);i++)//获取列名
+        {
+            str[i].Format("s",fd->name);
+            ForShow=ForShow+str[i]+"\t";
+        }
+        j=mysql_num_fields(result);
+                         
+        while(sql_row=mysql_fetch_row(result))//获取具体的数据
+        {
+            for(i=0;i<j;i++)
+                 ss.Format("s",sql_row[i]);
+        }
+        if(result!=NULL) mysql_free_result(result);
+      }
+}
+else
+{
+     MessageBox(_T("query sql failed!"));
+}
