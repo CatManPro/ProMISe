@@ -1,9 +1,11 @@
 ProMISe
-====
+=======
+=======
 INFO:
 The Professional MIS system ProMISe, also a promise.Designed by windCat studio.
 Example peroject: www.odoo.com
 
+=======
 =======
 ENVIROMENT:
 
@@ -13,10 +15,13 @@ Develop IDE   ---VS2005 Pro
 
 Develop MySQL ---MySQL 5.0.90
 
+=======
+
 Target System---win7(x64,X86),winxp,more compatible problem need to be solved in the future
 
 Target MySQL ---MySQL 5.0.90(or above),more compatible problem need to be solved in the future
 
+=======
 =======
 
 2014-12-18 1.0.0 Kevin Ou
