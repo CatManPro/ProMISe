@@ -55,4 +55,7 @@ if(!res)
 else
 {
      MessageBox(_T("query sql failed!"));
+
 }
+
+//http://blog.csdn.net/wencheng2998/article/details/6428985
