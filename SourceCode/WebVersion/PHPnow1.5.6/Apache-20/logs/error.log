@@ -1,0 +1,595 @@
+Installing the Apache_pn service
+(OS 5)¾Ü¾ø·ÃÎÊ¡£  : Failed to open the WinNT service manager
+Installing the Apache_pn service
+(OS 5)¾Ü¾ø·ÃÎÊ¡£  : Failed to open the WinNT service manager
+Installing the Apache_pn service
+The Apache_pn service is successfully installed.
+Starting the Apache_pn service
+The Apache_pn service is running.
+] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Sep 11 11:13:37 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Sep 11 11:13:37 2014] [notice] Parent: Created child process 568
+[Thu Sep 11 11:13:38 2014] [notice] Child 568: Child process is running
+[Thu Sep 11 11:13:38 2014] [notice] Child 568: Acquired the start mutex.
+[Thu Sep 11 11:13:38 2014] [notice] Child 568: Starting 1024 worker threads.
+[Thu Sep 11 15:21:14 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Sep 11 15:21:16 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Sep 11 15:21:16 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Sep 11 15:21:16 2014] [notice] Parent: Created child process 2088
+[Thu Sep 11 15:21:17 2014] [notice] Child 2088: Child process is running
+[Thu Sep 11 15:21:17 2014] [notice] Child 2088: Acquired the start mutex.
+[Thu Sep 11 15:21:17 2014] [notice] Child 2088: Starting 1024 worker threads.
+[Fri Sep 12 08:33:34 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Sep 12 08:33:42 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Sep 12 08:33:42 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Sep 12 08:33:42 2014] [notice] Parent: Created child process 1600
+[Fri Sep 12 08:33:42 2014] [notice] Child 1600: Child process is running
+[Fri Sep 12 08:33:43 2014] [notice] Child 1600: Acquired the start mutex.
+[Fri Sep 12 08:33:43 2014] [notice] Child 1600: Starting 1024 worker threads.
+[Mon Sep 15 12:42:42 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Sep 15 12:42:43 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Sep 15 12:42:43 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Sep 15 12:42:43 2014] [notice] Parent: Created child process 1592
+[Mon Sep 15 12:42:44 2014] [notice] Child 1592: Child process is running
+[Mon Sep 15 12:42:44 2014] [notice] Child 1592: Acquired the start mutex.
+[Mon Sep 15 12:42:44 2014] [notice] Child 1592: Starting 1024 worker threads.
+[Tue Sep 16 08:38:54 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Sep 16 08:38:57 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Sep 16 08:38:57 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Sep 16 08:38:57 2014] [notice] Parent: Created child process 1908
+[Tue Sep 16 08:38:57 2014] [notice] Child 1908: Child process is running
+[Tue Sep 16 08:38:57 2014] [notice] Child 1908: Acquired the start mutex.
+[Tue Sep 16 08:38:57 2014] [notice] Child 1908: Starting 1024 worker threads.
+[Tue Sep 16 15:32:07 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Sep 16 15:32:10 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Sep 16 15:32:10 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Sep 16 15:32:10 2014] [notice] Parent: Created child process 1916
+[Tue Sep 16 15:32:10 2014] [notice] Child 1916: Child process is running
+[Tue Sep 16 15:32:10 2014] [notice] Child 1916: Acquired the start mutex.
+[Tue Sep 16 15:32:10 2014] [notice] Child 1916: Starting 1024 worker threads.
+[Wed Sep 17 08:30:18 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Sep 17 08:30:20 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Sep 17 08:30:20 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Sep 17 08:30:20 2014] [notice] Parent: Created child process 1492
+[Wed Sep 17 08:30:21 2014] [notice] Child 1492: Child process is running
+[Wed Sep 17 08:30:21 2014] [notice] Child 1492: Acquired the start mutex.
+[Wed Sep 17 08:30:21 2014] [notice] Child 1492: Starting 1024 worker threads.
+[Thu Sep 18 08:41:46 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Sep 18 08:41:49 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Sep 18 08:41:49 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Sep 18 08:41:49 2014] [notice] Parent: Created child process 1652
+[Thu Sep 18 08:41:50 2014] [notice] Child 1652: Child process is running
+[Thu Sep 18 08:41:50 2014] [notice] Child 1652: Acquired the start mutex.
+[Thu Sep 18 08:41:50 2014] [notice] Child 1652: Starting 1024 worker threads.
+[Fri Sep 19 08:36:04 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Sep 19 08:36:06 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Sep 19 08:36:06 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Sep 19 08:36:06 2014] [notice] Parent: Created child process 1756
+[Fri Sep 19 08:36:07 2014] [notice] Child 1756: Child process is running
+[Fri Sep 19 08:36:07 2014] [notice] Child 1756: Acquired the start mutex.
+[Fri Sep 19 08:36:07 2014] [notice] Child 1756: Starting 1024 worker threads.
+[Mon Sep 22 08:33:54 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Sep 22 08:33:56 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Sep 22 08:33:56 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Sep 22 08:33:56 2014] [notice] Parent: Created child process 1592
+[Mon Sep 22 08:33:56 2014] [notice] Child 1592: Child process is running
+[Mon Sep 22 08:33:56 2014] [notice] Child 1592: Acquired the start mutex.
+[Mon Sep 22 08:33:56 2014] [notice] Child 1592: Starting 1024 worker threads.
+[Tue Sep 23 08:38:11 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Sep 23 08:38:13 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Sep 23 08:38:13 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Sep 23 08:38:13 2014] [notice] Parent: Created child process 1516
+[Tue Sep 23 08:38:14 2014] [notice] Child 1516: Child process is running
+[Tue Sep 23 08:38:14 2014] [notice] Child 1516: Acquired the start mutex.
+[Tue Sep 23 08:38:14 2014] [notice] Child 1516: Starting 1024 worker threads.
+[Tue Sep 23 13:40:35 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Sep 23 13:40:39 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Sep 23 13:40:39 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Sep 23 13:40:39 2014] [notice] Parent: Created child process 1500
+[Tue Sep 23 13:40:40 2014] [notice] Child 1500: Child process is running
+[Tue Sep 23 13:40:40 2014] [notice] Child 1500: Acquired the start mutex.
+[Tue Sep 23 13:40:40 2014] [notice] Child 1500: Starting 1024 worker threads.
+[Wed Sep 24 08:32:38 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Sep 24 08:32:43 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Sep 24 08:32:43 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Sep 24 08:32:43 2014] [notice] Parent: Created child process 1728
+[Wed Sep 24 08:32:43 2014] [notice] Child 1728: Child process is running
+[Wed Sep 24 08:32:43 2014] [notice] Child 1728: Acquired the start mutex.
+[Wed Sep 24 08:32:43 2014] [notice] Child 1728: Starting 1024 worker threads.
+[Thu Sep 25 08:30:17 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Sep 25 08:30:25 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Sep 25 08:30:25 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Sep 25 08:30:25 2014] [notice] Parent: Created child process 2144
+[Thu Sep 25 08:30:26 2014] [notice] Child 2144: Child process is running
+[Thu Sep 25 08:30:26 2014] [notice] Child 2144: Acquired the start mutex.
+[Thu Sep 25 08:30:26 2014] [notice] Child 2144: Starting 1024 worker threads.
+[Fri Sep 26 08:32:24 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Sep 26 08:32:27 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Sep 26 08:32:27 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Sep 26 08:32:27 2014] [notice] Parent: Created child process 1548
+[Fri Sep 26 08:32:28 2014] [notice] Child 1548: Child process is running
+[Fri Sep 26 08:32:28 2014] [notice] Child 1548: Acquired the start mutex.
+[Fri Sep 26 08:32:28 2014] [notice] Child 1548: Starting 1024 worker threads.
+[Sun Sep 28 08:35:50 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Sep 28 08:35:53 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Sun Sep 28 08:35:53 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Sun Sep 28 08:35:53 2014] [notice] Parent: Created child process 984
+[Sun Sep 28 08:35:54 2014] [notice] Child 984: Child process is running
+[Sun Sep 28 08:35:54 2014] [notice] Child 984: Acquired the start mutex.
+[Sun Sep 28 08:35:54 2014] [notice] Child 984: Starting 1024 worker threads.
+[Sun Sep 28 09:47:01 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Sep 28 09:47:02 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Sun Sep 28 09:47:02 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Sun Sep 28 09:47:02 2014] [notice] Parent: Created child process 1624
+[Sun Sep 28 09:47:03 2014] [notice] Child 1624: Child process is running
+[Sun Sep 28 09:47:03 2014] [notice] Child 1624: Acquired the start mutex.
+[Sun Sep 28 09:47:03 2014] [notice] Child 1624: Starting 1024 worker threads.
+[Sun Sep 28 12:14:13 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Sep 28 12:14:18 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Sun Sep 28 12:14:18 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Sun Sep 28 12:14:18 2014] [notice] Parent: Created child process 2152
+[Sun Sep 28 12:14:18 2014] [notice] Child 2152: Child process is running
+[Sun Sep 28 12:14:18 2014] [notice] Child 2152: Acquired the start mutex.
+[Sun Sep 28 12:14:18 2014] [notice] Child 2152: Starting 1024 worker threads.
+[Sun Sep 28 15:20:26 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Sep 28 15:20:28 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Sun Sep 28 15:20:28 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Sun Sep 28 15:20:28 2014] [notice] Parent: Created child process 1728
+[Sun Sep 28 15:20:29 2014] [notice] Child 1728: Child process is running
+[Sun Sep 28 15:20:29 2014] [notice] Child 1728: Acquired the start mutex.
+[Sun Sep 28 15:20:29 2014] [notice] Child 1728: Starting 1024 worker threads.
+[Mon Sep 29 08:30:23 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Sep 29 08:30:24 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Sep 29 08:30:24 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Sep 29 08:30:24 2014] [notice] Parent: Created child process 1476
+[Mon Sep 29 08:30:25 2014] [notice] Child 1476: Child process is running
+[Mon Sep 29 08:30:25 2014] [notice] Child 1476: Acquired the start mutex.
+[Mon Sep 29 08:30:25 2014] [notice] Child 1476: Starting 1024 worker threads.
+[Tue Sep 30 08:33:40 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Sep 30 08:33:43 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Sep 30 08:33:43 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Sep 30 08:33:43 2014] [notice] Parent: Created child process 1888
+[Tue Sep 30 08:33:43 2014] [notice] Child 1888: Child process is running
+[Tue Sep 30 08:33:43 2014] [notice] Child 1888: Acquired the start mutex.
+[Tue Sep 30 08:33:43 2014] [notice] Child 1888: Starting 1024 worker threads.
+[Wed Oct 08 08:32:00 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 08 08:32:06 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Oct 08 08:32:06 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Oct 08 08:32:06 2014] [notice] Parent: Created child process 1484
+[Wed Oct 08 08:32:07 2014] [notice] Child 1484: Child process is running
+[Wed Oct 08 08:32:12 2014] [notice] Child 1484: Acquired the start mutex.
+[Wed Oct 08 08:32:12 2014] [notice] Child 1484: Starting 1024 worker threads.
+[Thu Oct 09 08:35:58 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Oct 09 08:36:04 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Oct 09 08:36:04 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Oct 09 08:36:04 2014] [notice] Parent: Created child process 3340
+[Thu Oct 09 08:36:05 2014] [notice] Child 3340: Child process is running
+[Thu Oct 09 08:36:05 2014] [notice] Child 3340: Acquired the start mutex.
+[Thu Oct 09 08:36:05 2014] [notice] Child 3340: Starting 1024 worker threads.
+[Fri Oct 10 08:30:06 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Oct 10 08:30:10 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Oct 10 08:30:10 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Oct 10 08:30:10 2014] [notice] Parent: Created child process 1796
+[Fri Oct 10 08:30:10 2014] [notice] Child 1796: Child process is running
+[Fri Oct 10 08:30:10 2014] [notice] Child 1796: Acquired the start mutex.
+[Fri Oct 10 08:30:10 2014] [notice] Child 1796: Starting 1024 worker threads.
+[Sat Oct 11 08:31:27 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Oct 11 08:31:34 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Sat Oct 11 08:31:34 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Sat Oct 11 08:31:34 2014] [notice] Parent: Created child process 2124
+[Sat Oct 11 08:31:35 2014] [notice] Child 2124: Child process is running
+[Sat Oct 11 08:31:35 2014] [notice] Child 2124: Acquired the start mutex.
+[Sat Oct 11 08:31:35 2014] [notice] Child 2124: Starting 1024 worker threads.
+[Mon Oct 13 08:37:27 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Oct 13 08:37:35 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Oct 13 08:37:35 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Oct 13 08:37:35 2014] [notice] Parent: Created child process 2064
+[Mon Oct 13 08:37:36 2014] [notice] Child 2064: Child process is running
+[Mon Oct 13 08:37:36 2014] [notice] Child 2064: Acquired the start mutex.
+[Mon Oct 13 08:37:36 2014] [notice] Child 2064: Starting 1024 worker threads.
+[Tue Oct 14 08:30:04 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Oct 14 08:30:14 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Oct 14 08:30:14 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Oct 14 08:30:14 2014] [notice] Parent: Created child process 2192
+[Tue Oct 14 08:30:15 2014] [notice] Child 2192: Child process is running
+[Tue Oct 14 08:30:15 2014] [notice] Child 2192: Acquired the start mutex.
+[Tue Oct 14 08:30:15 2014] [notice] Child 2192: Starting 1024 worker threads.
+[Wed Oct 15 08:32:12 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 15 08:32:20 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Oct 15 08:32:20 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Oct 15 08:32:20 2014] [notice] Parent: Created child process 2004
+[Wed Oct 15 08:32:21 2014] [notice] Child 2004: Child process is running
+[Wed Oct 15 08:32:21 2014] [notice] Child 2004: Acquired the start mutex.
+[Wed Oct 15 08:32:21 2014] [notice] Child 2004: Starting 1024 worker threads.
+[Thu Oct 16 08:30:02 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Oct 16 08:30:03 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Oct 16 08:30:03 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Oct 16 08:30:03 2014] [notice] Parent: Created child process 1564
+[Thu Oct 16 08:30:04 2014] [notice] Child 1564: Child process is running
+[Thu Oct 16 08:30:04 2014] [notice] Child 1564: Acquired the start mutex.
+[Thu Oct 16 08:30:04 2014] [notice] Child 1564: Starting 1024 worker threads.
+[Mon Oct 20 08:34:46 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Oct 20 08:34:49 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Oct 20 08:34:49 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Oct 20 08:34:49 2014] [notice] Parent: Created child process 1764
+[Mon Oct 20 08:34:50 2014] [notice] Child 1764: Child process is running
+[Mon Oct 20 08:34:50 2014] [notice] Child 1764: Acquired the start mutex.
+[Mon Oct 20 08:34:50 2014] [notice] Child 1764: Starting 1024 worker threads.
+[Tue Oct 21 08:33:36 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Oct 21 08:33:44 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Oct 21 08:33:44 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Oct 21 08:33:44 2014] [notice] Parent: Created child process 1568
+[Tue Oct 21 08:33:44 2014] [notice] Child 1568: Child process is running
+[Tue Oct 21 08:33:44 2014] [notice] Child 1568: Acquired the start mutex.
+[Tue Oct 21 08:33:44 2014] [notice] Child 1568: Starting 1024 worker threads.
+[Wed Oct 22 08:32:46 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 22 08:32:50 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Oct 22 08:32:50 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Oct 22 08:32:50 2014] [notice] Parent: Created child process 1892
+[Wed Oct 22 08:32:51 2014] [notice] Child 1892: Child process is running
+[Wed Oct 22 08:32:51 2014] [notice] Child 1892: Acquired the start mutex.
+[Wed Oct 22 08:32:51 2014] [notice] Child 1892: Starting 1024 worker threads.
+[Thu Oct 23 08:31:54 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Oct 23 08:31:55 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Oct 23 08:31:55 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Oct 23 08:31:55 2014] [notice] Parent: Created child process 1856
+[Thu Oct 23 08:31:56 2014] [notice] Child 1856: Child process is running
+[Thu Oct 23 08:31:56 2014] [notice] Child 1856: Acquired the start mutex.
+[Thu Oct 23 08:31:56 2014] [notice] Child 1856: Starting 1024 worker threads.
+[Fri Oct 24 09:59:36 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Oct 24 09:59:41 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Oct 24 09:59:41 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Oct 24 09:59:41 2014] [notice] Parent: Created child process 2068
+[Fri Oct 24 09:59:41 2014] [notice] Child 2068: Child process is running
+[Fri Oct 24 09:59:41 2014] [notice] Child 2068: Acquired the start mutex.
+[Fri Oct 24 09:59:41 2014] [notice] Child 2068: Starting 1024 worker threads.
+[Mon Oct 27 08:34:50 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Oct 27 08:34:53 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Oct 27 08:34:53 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Oct 27 08:34:53 2014] [notice] Parent: Created child process 2112
+[Mon Oct 27 08:34:53 2014] [notice] Child 2112: Child process is running
+[Mon Oct 27 08:34:53 2014] [notice] Child 2112: Acquired the start mutex.
+[Mon Oct 27 08:34:53 2014] [notice] Child 2112: Starting 1024 worker threads.
+[Tue Oct 28 08:28:28 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Oct 28 08:28:32 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Oct 28 08:28:32 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Oct 28 08:28:32 2014] [notice] Parent: Created child process 1776
+[Tue Oct 28 08:28:32 2014] [notice] Child 1776: Child process is running
+[Tue Oct 28 08:28:32 2014] [notice] Child 1776: Acquired the start mutex.
+[Tue Oct 28 08:28:32 2014] [notice] Child 1776: Starting 1024 worker threads.
+[Wed Oct 29 08:38:03 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Oct 29 08:38:04 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Oct 29 08:38:04 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Oct 29 08:38:04 2014] [notice] Parent: Created child process 1520
+[Wed Oct 29 08:38:04 2014] [notice] Child 1520: Child process is running
+[Wed Oct 29 08:38:04 2014] [notice] Child 1520: Acquired the start mutex.
+[Wed Oct 29 08:38:04 2014] [notice] Child 1520: Starting 1024 worker threads.
+[Thu Oct 30 08:32:50 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Oct 30 08:32:55 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Oct 30 08:32:55 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Oct 30 08:32:55 2014] [notice] Parent: Created child process 2104
+[Thu Oct 30 08:32:55 2014] [notice] Child 2104: Child process is running
+[Thu Oct 30 08:32:55 2014] [notice] Child 2104: Acquired the start mutex.
+[Thu Oct 30 08:32:55 2014] [notice] Child 2104: Starting 1024 worker threads.
+[Fri Oct 31 08:35:27 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Oct 31 08:35:35 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Oct 31 08:35:35 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Oct 31 08:35:35 2014] [notice] Parent: Created child process 2076
+[Fri Oct 31 08:35:35 2014] [notice] Child 2076: Child process is running
+[Fri Oct 31 08:35:35 2014] [notice] Child 2076: Acquired the start mutex.
+[Fri Oct 31 08:35:35 2014] [notice] Child 2076: Starting 1024 worker threads.
+[Mon Nov 03 08:33:54 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 03 08:33:59 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Nov 03 08:33:59 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Nov 03 08:33:59 2014] [notice] Parent: Created child process 1832
+[Mon Nov 03 08:34:00 2014] [notice] Child 1832: Child process is running
+[Mon Nov 03 08:34:00 2014] [notice] Child 1832: Acquired the start mutex.
+[Mon Nov 03 08:34:00 2014] [notice] Child 1832: Starting 1024 worker threads.
+[Tue Nov 04 08:35:53 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Nov 04 08:35:55 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Nov 04 08:35:55 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Nov 04 08:35:55 2014] [notice] Parent: Created child process 1520
+[Tue Nov 04 08:35:55 2014] [notice] Child 1520: Child process is running
+[Tue Nov 04 08:35:55 2014] [notice] Child 1520: Acquired the start mutex.
+[Tue Nov 04 08:35:55 2014] [notice] Child 1520: Starting 1024 worker threads.
+[Wed Nov 05 08:32:33 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 05 08:32:35 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Nov 05 08:32:35 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Nov 05 08:32:35 2014] [notice] Parent: Created child process 1540
+[Wed Nov 05 08:32:35 2014] [notice] Child 1540: Child process is running
+[Wed Nov 05 08:32:35 2014] [notice] Child 1540: Acquired the start mutex.
+[Wed Nov 05 08:32:35 2014] [notice] Child 1540: Starting 1024 worker threads.
+[Thu Nov 06 08:33:51 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Nov 06 08:34:05 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Nov 06 08:34:05 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Nov 06 08:34:05 2014] [notice] Parent: Created child process 2852
+[Thu Nov 06 08:34:06 2014] [notice] Child 2852: Child process is running
+[Thu Nov 06 08:34:06 2014] [notice] Child 2852: Acquired the start mutex.
+[Thu Nov 06 08:34:06 2014] [notice] Child 2852: Starting 1024 worker threads.
+[Fri Nov 07 08:34:28 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 07 08:34:29 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Nov 07 08:34:29 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Nov 07 08:34:29 2014] [notice] Parent: Created child process 1500
+[Fri Nov 07 08:34:30 2014] [notice] Child 1500: Child process is running
+[Fri Nov 07 08:34:30 2014] [notice] Child 1500: Acquired the start mutex.
+[Fri Nov 07 08:34:30 2014] [notice] Child 1500: Starting 1024 worker threads.
+[Mon Nov 10 08:31:36 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 10 08:31:40 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Nov 10 08:31:40 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Nov 10 08:31:40 2014] [notice] Parent: Created child process 1596
+[Mon Nov 10 08:31:41 2014] [notice] Child 1596: Child process is running
+[Mon Nov 10 08:31:42 2014] [notice] Child 1596: Acquired the start mutex.
+[Mon Nov 10 08:31:42 2014] [notice] Child 1596: Starting 1024 worker threads.
+[Tue Nov 11 08:34:02 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Nov 11 08:34:04 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Nov 11 08:34:04 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Nov 11 08:34:04 2014] [notice] Parent: Created child process 1568
+[Tue Nov 11 08:34:05 2014] [notice] Child 1568: Child process is running
+[Tue Nov 11 08:34:05 2014] [notice] Child 1568: Acquired the start mutex.
+[Tue Nov 11 08:34:05 2014] [notice] Child 1568: Starting 1024 worker threads.
+[Wed Nov 12 08:32:04 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 12 08:32:06 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Nov 12 08:32:06 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Nov 12 08:32:06 2014] [notice] Parent: Created child process 1560
+[Wed Nov 12 08:32:06 2014] [notice] Child 1560: Child process is running
+[Wed Nov 12 08:32:06 2014] [notice] Child 1560: Acquired the start mutex.
+[Wed Nov 12 08:32:06 2014] [notice] Child 1560: Starting 1024 worker threads.
+[Thu Nov 13 08:35:07 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Nov 13 08:35:08 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Nov 13 08:35:08 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Nov 13 08:35:08 2014] [notice] Parent: Created child process 1528
+[Thu Nov 13 08:35:09 2014] [notice] Child 1528: Child process is running
+[Thu Nov 13 08:35:09 2014] [notice] Child 1528: Acquired the start mutex.
+[Thu Nov 13 08:35:09 2014] [notice] Child 1528: Starting 1024 worker threads.
+[Fri Nov 14 08:31:57 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 14 08:31:59 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Nov 14 08:31:59 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Nov 14 08:31:59 2014] [notice] Parent: Created child process 1548
+[Fri Nov 14 08:31:59 2014] [notice] Child 1548: Child process is running
+[Fri Nov 14 08:31:59 2014] [notice] Child 1548: Acquired the start mutex.
+[Fri Nov 14 08:31:59 2014] [notice] Child 1548: Starting 1024 worker threads.
+[Fri Nov 14 14:32:19 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 14 14:32:20 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Nov 14 14:32:20 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Nov 14 14:32:20 2014] [notice] Parent: Created child process 1532
+[Fri Nov 14 14:32:21 2014] [notice] Child 1532: Child process is running
+[Fri Nov 14 14:32:21 2014] [notice] Child 1532: Acquired the start mutex.
+[Fri Nov 14 14:32:21 2014] [notice] Child 1532: Starting 1024 worker threads.
+[Mon Nov 17 08:34:14 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 17 08:34:16 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Nov 17 08:34:16 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Nov 17 08:34:16 2014] [notice] Parent: Created child process 1584
+[Mon Nov 17 08:34:16 2014] [notice] Child 1584: Child process is running
+[Mon Nov 17 08:34:16 2014] [notice] Child 1584: Acquired the start mutex.
+[Mon Nov 17 08:34:16 2014] [notice] Child 1584: Starting 1024 worker threads.
+[Tue Nov 18 08:35:17 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Nov 18 08:35:20 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Nov 18 08:35:20 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Nov 18 08:35:20 2014] [notice] Parent: Created child process 1568
+[Tue Nov 18 08:35:20 2014] [notice] Child 1568: Child process is running
+[Tue Nov 18 08:35:20 2014] [notice] Child 1568: Acquired the start mutex.
+[Tue Nov 18 08:35:20 2014] [notice] Child 1568: Starting 1024 worker threads.
+[Tue Nov 18 10:10:49 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Nov 18 10:10:52 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Nov 18 10:10:52 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Nov 18 10:10:52 2014] [notice] Parent: Created child process 1580
+[Tue Nov 18 10:10:52 2014] [notice] Child 1580: Child process is running
+[Tue Nov 18 10:10:52 2014] [notice] Child 1580: Acquired the start mutex.
+[Tue Nov 18 10:10:52 2014] [notice] Child 1580: Starting 1024 worker threads.
+[Wed Nov 19 08:37:48 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 19 08:37:49 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Nov 19 08:37:49 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Nov 19 08:37:49 2014] [notice] Parent: Created child process 1492
+[Wed Nov 19 08:37:50 2014] [notice] Child 1492: Child process is running
+[Wed Nov 19 08:37:50 2014] [notice] Child 1492: Acquired the start mutex.
+[Wed Nov 19 08:37:50 2014] [notice] Child 1492: Starting 1024 worker threads.
+[Wed Nov 19 10:17:51 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 19 10:17:58 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Nov 19 10:17:58 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Nov 19 10:17:58 2014] [notice] Parent: Created child process 1780
+[Wed Nov 19 10:17:59 2014] [notice] Child 1780: Child process is running
+[Wed Nov 19 10:17:59 2014] [notice] Child 1780: Acquired the start mutex.
+[Wed Nov 19 10:17:59 2014] [notice] Child 1780: Starting 1024 worker threads.
+[Wed Nov 19 10:27:08 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 19 10:27:12 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Nov 19 10:27:12 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Nov 19 10:27:12 2014] [notice] Parent: Created child process 1648
+[Wed Nov 19 10:27:13 2014] [notice] Child 1648: Child process is running
+[Wed Nov 19 10:27:13 2014] [notice] Child 1648: Acquired the start mutex.
+[Wed Nov 19 10:27:13 2014] [notice] Child 1648: Starting 1024 worker threads.
+[Wed Nov 19 12:10:34 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 19 12:10:40 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Nov 19 12:10:40 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Nov 19 12:10:40 2014] [notice] Parent: Created child process 1836
+[Wed Nov 19 12:10:41 2014] [notice] Child 1836: Child process is running
+[Wed Nov 19 12:10:41 2014] [notice] Child 1836: Acquired the start mutex.
+[Wed Nov 19 12:10:41 2014] [notice] Child 1836: Starting 1024 worker threads.
+[Thu Nov 20 08:36:23 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Nov 20 08:36:24 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Nov 20 08:36:24 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Nov 20 08:36:24 2014] [notice] Parent: Created child process 1504
+[Thu Nov 20 08:36:24 2014] [notice] Child 1504: Child process is running
+[Thu Nov 20 08:36:24 2014] [notice] Child 1504: Acquired the start mutex.
+[Thu Nov 20 08:36:24 2014] [notice] Child 1504: Starting 1024 worker threads.
+[Thu Nov 20 13:08:16 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Nov 20 13:08:20 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Nov 20 13:08:20 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Nov 20 13:08:20 2014] [notice] Parent: Created child process 1996
+[Thu Nov 20 13:08:20 2014] [notice] Child 1996: Child process is running
+[Thu Nov 20 13:08:23 2014] [notice] Child 1996: Acquired the start mutex.
+[Thu Nov 20 13:08:23 2014] [notice] Child 1996: Starting 1024 worker threads.
+[Fri Nov 21 08:36:46 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 21 08:36:50 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Nov 21 08:36:50 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Nov 21 08:36:50 2014] [notice] Parent: Created child process 1596
+[Fri Nov 21 08:36:50 2014] [notice] Child 1596: Child process is running
+[Fri Nov 21 08:36:50 2014] [notice] Child 1596: Acquired the start mutex.
+[Fri Nov 21 08:36:50 2014] [notice] Child 1596: Starting 1024 worker threads.
+[Mon Nov 24 08:35:17 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 24 08:35:22 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Nov 24 08:35:22 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Nov 24 08:35:22 2014] [notice] Parent: Created child process 1748
+[Mon Nov 24 08:35:23 2014] [notice] Child 1748: Child process is running
+[Mon Nov 24 08:35:24 2014] [notice] Child 1748: Acquired the start mutex.
+[Mon Nov 24 08:35:24 2014] [notice] Child 1748: Starting 1024 worker threads.
+[Mon Nov 24 11:37:00 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 24 11:37:05 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Nov 24 11:37:05 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Nov 24 11:37:05 2014] [notice] Parent: Created child process 1844
+[Mon Nov 24 11:37:06 2014] [notice] Child 1844: Child process is running
+[Mon Nov 24 11:37:06 2014] [notice] Child 1844: Acquired the start mutex.
+[Mon Nov 24 11:37:06 2014] [notice] Child 1844: Starting 1024 worker threads.
+[Tue Nov 25 08:39:22 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Nov 25 08:39:27 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Nov 25 08:39:27 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Nov 25 08:39:27 2014] [notice] Parent: Created child process 1836
+[Tue Nov 25 08:39:28 2014] [notice] Child 1836: Child process is running
+[Tue Nov 25 08:39:28 2014] [notice] Child 1836: Acquired the start mutex.
+[Tue Nov 25 08:39:28 2014] [notice] Child 1836: Starting 1024 worker threads.
+[Wed Nov 26 08:33:16 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 26 08:33:21 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Nov 26 08:33:21 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Nov 26 08:33:21 2014] [notice] Parent: Created child process 1516
+[Wed Nov 26 08:33:21 2014] [notice] Child 1516: Child process is running
+[Wed Nov 26 08:33:22 2014] [notice] Child 1516: Acquired the start mutex.
+[Wed Nov 26 08:33:22 2014] [notice] Child 1516: Starting 1024 worker threads.
+[Thu Nov 27 08:32:22 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Nov 27 08:32:29 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Nov 27 08:32:29 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Nov 27 08:32:29 2014] [notice] Parent: Created child process 2100
+[Thu Nov 27 08:32:30 2014] [notice] Child 2100: Child process is running
+[Thu Nov 27 08:32:30 2014] [notice] Child 2100: Acquired the start mutex.
+[Thu Nov 27 08:32:30 2014] [notice] Child 2100: Starting 1024 worker threads.
+[Fri Nov 28 08:34:28 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 28 08:34:30 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Nov 28 08:34:30 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Nov 28 08:34:30 2014] [notice] Parent: Created child process 1512
+[Fri Nov 28 08:34:30 2014] [notice] Child 1512: Child process is running
+[Fri Nov 28 08:34:30 2014] [notice] Child 1512: Acquired the start mutex.
+[Fri Nov 28 08:34:30 2014] [notice] Child 1512: Starting 1024 worker threads.
+[Mon Dec 01 08:37:10 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Dec 01 08:37:12 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Dec 01 08:37:12 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Dec 01 08:37:12 2014] [notice] Parent: Created child process 1524
+[Mon Dec 01 08:37:12 2014] [notice] Child 1524: Child process is running
+[Mon Dec 01 08:37:15 2014] [notice] Child 1524: Acquired the start mutex.
+[Mon Dec 01 08:37:15 2014] [notice] Child 1524: Starting 1024 worker threads.
+[Tue Dec 02 08:38:59 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Dec 02 08:39:00 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Dec 02 08:39:00 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Dec 02 08:39:00 2014] [notice] Parent: Created child process 1648
+[Tue Dec 02 08:39:01 2014] [notice] Child 1648: Child process is running
+[Tue Dec 02 08:39:01 2014] [notice] Child 1648: Acquired the start mutex.
+[Tue Dec 02 08:39:01 2014] [notice] Child 1648: Starting 1024 worker threads.
+[Tue Dec 02 15:00:14 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Dec 02 15:00:16 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Dec 02 15:00:16 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Dec 02 15:00:16 2014] [notice] Parent: Created child process 1608
+[Tue Dec 02 15:00:17 2014] [notice] Child 1608: Child process is running
+[Tue Dec 02 15:00:17 2014] [notice] Child 1608: Acquired the start mutex.
+[Tue Dec 02 15:00:17 2014] [notice] Child 1608: Starting 1024 worker threads.
+[Wed Dec 03 08:34:00 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Dec 03 08:34:02 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Dec 03 08:34:02 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Dec 03 08:34:02 2014] [notice] Parent: Created child process 1572
+[Wed Dec 03 08:34:02 2014] [notice] Child 1572: Child process is running
+[Wed Dec 03 08:34:02 2014] [notice] Child 1572: Acquired the start mutex.
+[Wed Dec 03 08:34:02 2014] [notice] Child 1572: Starting 1024 worker threads.
+[Wed Dec 03 09:26:31 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Dec 03 09:26:36 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Dec 03 09:26:36 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Dec 03 09:26:36 2014] [notice] Parent: Created child process 1860
+[Wed Dec 03 09:26:37 2014] [notice] Child 1860: Child process is running
+[Wed Dec 03 09:26:43 2014] [notice] Child 1860: Acquired the start mutex.
+[Wed Dec 03 09:26:43 2014] [notice] Child 1860: Starting 1024 worker threads.
+[Wed Dec 03 15:01:20 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Dec 03 15:01:25 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Dec 03 15:01:25 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Dec 03 15:01:25 2014] [notice] Parent: Created child process 1616
+[Wed Dec 03 15:01:25 2014] [notice] Child 1616: Child process is running
+[Wed Dec 03 15:01:25 2014] [notice] Child 1616: Acquired the start mutex.
+[Wed Dec 03 15:01:25 2014] [notice] Child 1616: Starting 1024 worker threads.
+[Thu Dec 04 08:41:01 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Dec 04 08:41:18 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Dec 04 08:41:18 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Dec 04 08:41:18 2014] [notice] Parent: Created child process 3408
+[Thu Dec 04 08:41:19 2014] [notice] Child 3408: Child process is running
+[Thu Dec 04 08:41:23 2014] [notice] Child 3408: Acquired the start mutex.
+[Thu Dec 04 08:41:23 2014] [notice] Child 3408: Starting 1024 worker threads.
+[Thu Dec 04 14:34:20 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Dec 04 14:34:23 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Dec 04 14:34:23 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Dec 04 14:34:23 2014] [notice] Parent: Created child process 1828
+[Thu Dec 04 14:34:24 2014] [notice] Child 1828: Child process is running
+[Thu Dec 04 14:34:24 2014] [notice] Child 1828: Acquired the start mutex.
+[Thu Dec 04 14:34:24 2014] [notice] Child 1828: Starting 1024 worker threads.
+[Fri Dec 05 08:37:13 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Dec 05 08:37:14 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Dec 05 08:37:14 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Dec 05 08:37:14 2014] [notice] Parent: Created child process 1500
+[Fri Dec 05 08:37:15 2014] [notice] Child 1500: Child process is running
+[Fri Dec 05 08:37:19 2014] [notice] Child 1500: Acquired the start mutex.
+[Fri Dec 05 08:37:19 2014] [notice] Child 1500: Starting 1024 worker threads.
+[Mon Dec 08 08:37:13 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Dec 08 08:37:15 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Dec 08 08:37:15 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Dec 08 08:37:15 2014] [notice] Parent: Created child process 1752
+[Mon Dec 08 08:37:16 2014] [notice] Child 1752: Child process is running
+[Mon Dec 08 08:37:18 2014] [notice] Child 1752: Acquired the start mutex.
+[Mon Dec 08 08:37:18 2014] [notice] Child 1752: Starting 1024 worker threads.
+[Tue Dec 09 08:29:52 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Dec 09 08:29:58 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Dec 09 08:29:58 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Dec 09 08:29:58 2014] [notice] Parent: Created child process 2448
+[Tue Dec 09 08:29:58 2014] [notice] Child 2448: Child process is running
+[Tue Dec 09 08:29:58 2014] [notice] Child 2448: Acquired the start mutex.
+[Tue Dec 09 08:29:58 2014] [notice] Child 2448: Starting 1024 worker threads.
+[Wed Dec 10 08:33:14 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Dec 10 08:33:20 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Dec 10 08:33:20 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Dec 10 08:33:20 2014] [notice] Parent: Created child process 3004
+[Wed Dec 10 08:33:20 2014] [notice] Child 3004: Child process is running
+[Wed Dec 10 08:33:20 2014] [notice] Child 3004: Acquired the start mutex.
+[Wed Dec 10 08:33:20 2014] [notice] Child 3004: Starting 1024 worker threads.
+[Thu Dec 11 08:31:20 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Dec 11 08:31:27 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Dec 11 08:31:27 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Dec 11 08:31:27 2014] [notice] Parent: Created child process 2200
+[Thu Dec 11 08:31:28 2014] [notice] Child 2200: Child process is running
+[Thu Dec 11 08:31:28 2014] [notice] Child 2200: Acquired the start mutex.
+[Thu Dec 11 08:31:28 2014] [notice] Child 2200: Starting 1024 worker threads.
+[Fri Dec 12 08:41:20 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Dec 12 08:41:21 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Fri Dec 12 08:41:21 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Fri Dec 12 08:41:21 2014] [notice] Parent: Created child process 1540
+[Fri Dec 12 08:41:22 2014] [notice] Child 1540: Child process is running
+[Fri Dec 12 08:41:22 2014] [notice] Child 1540: Acquired the start mutex.
+[Fri Dec 12 08:41:22 2014] [notice] Child 1540: Starting 1024 worker threads.
+[Mon Dec 15 08:29:59 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Dec 15 08:30:04 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Mon Dec 15 08:30:04 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Mon Dec 15 08:30:04 2014] [notice] Parent: Created child process 2328
+[Mon Dec 15 08:30:05 2014] [notice] Child 2328: Child process is running
+[Mon Dec 15 08:30:05 2014] [notice] Child 2328: Acquired the start mutex.
+[Mon Dec 15 08:30:05 2014] [notice] Child 2328: Starting 1024 worker threads.
+[Tue Dec 16 08:35:07 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Dec 16 08:35:08 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Tue Dec 16 08:35:08 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Tue Dec 16 08:35:08 2014] [notice] Parent: Created child process 1544
+[Tue Dec 16 08:35:09 2014] [notice] Child 1544: Child process is running
+[Tue Dec 16 08:35:09 2014] [notice] Child 1544: Acquired the start mutex.
+[Tue Dec 16 08:35:09 2014] [notice] Child 1544: Starting 1024 worker threads.
+[Wed Dec 17 08:37:05 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Dec 17 08:37:07 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Wed Dec 17 08:37:07 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Wed Dec 17 08:37:07 2014] [notice] Parent: Created child process 1568
+[Wed Dec 17 08:37:08 2014] [notice] Child 1568: Child process is running
+[Wed Dec 17 08:37:08 2014] [notice] Child 1568: Acquired the start mutex.
+[Wed Dec 17 08:37:08 2014] [notice] Child 1568: Starting 1024 worker threads.
+[Thu Dec 18 08:36:33 2014] [warn] pid file D:/Program Files (x86)/PHPnow-1.5.6/Apache-20/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Dec 18 08:36:35 2014] [notice] Apache/2.0.63 (Win32) PHP/5.2.14 configured -- resuming normal operations
+[Thu Dec 18 08:36:35 2014] [notice] Server built: Jan 17 2008 22:58:29
+[Thu Dec 18 08:36:35 2014] [notice] Parent: Created child process 1508
+[Thu Dec 18 08:36:36 2014] [notice] Child 1508: Child process is running
+[Thu Dec 18 08:36:42 2014] [notice] Child 1508: Acquired the start mutex.
+[Thu Dec 18 08:36:42 2014] [notice] Child 1508: Starting 1024 worker threads.
