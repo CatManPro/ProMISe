@@ -29,7 +29,7 @@ Target MySQL ---MySQL 5.0.90(or above),more compatible problem need to be solved
 
 1.Mysql用户表的设计，及从mysql数据库验证合法登录的login逻辑
 
-2.对密码再次加密，题号安全性。并未实施，但验证了MD5的可用性
+2.对密码再次加密，提高程序安全性。程序中并未实施，但验证了MD5的可用性
 
 3.网页版客户端的构思与windows版本的融合搭建
 
