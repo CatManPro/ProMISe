@@ -18,13 +18,13 @@ class CAboutDlg : public CDialog
 public:
 	CAboutDlg();
 
-// Dialog Data
+	// Dialog Data
 	enum { IDD = IDD_ABOUTBOX };
 
-	protected:
+protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 
-// Implementation
+	// Implementation
 protected:
 	DECLARE_MESSAGE_MAP()
 };
@@ -48,7 +48,7 @@ END_MESSAGE_MAP()
 
 
 CProMISeDlg::CProMISeDlg(CWnd* pParent /*=NULL*/)
-	: CDialog(CProMISeDlg::IDD, pParent)
+: CDialog(CProMISeDlg::IDD, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -102,12 +102,14 @@ BOOL CProMISeDlg::OnInitDialog()
 	// TODO: Add extra initialization here
 	freopen("errout.txt","w",stderr);
 	mysql_init (&mysql);
-	if(!mysql_real_connect(&mysql,"localhost","root","roottoor","mydb",3306,NULL,0))
+	if(!mysql_real_connect(&mysql,"localhost","root","roottoor","promise",3306,NULL,0))
 	{ 
 		AfxMessageBox(_T("数据库连接失败")); 
 		fprintf(stderr,"Failedtoconnecttodatabase:Error:%s\\n",mysql_error(&mysql));
 		return FALSE;
 	}
+	mysql_close(&mysql);//关闭sql
+
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -171,16 +173,60 @@ void CProMISeDlg::OnBnClickedBtnD1Leave()
 void CProMISeDlg::OnBnClickedBtnD1Log()
 {
 	// TODO: Add your control notification handler code here
-	CString strUsrName,strPassWd;
+	mysql_init (&mysql);
+	if(!mysql_real_connect(&mysql,"localhost","root","roottoor","promise",3306,NULL,0))
+	{ 
+		AfxMessageBox(_T("数据库连接失败")); 
+	}
+	CString strUsrName,strPassWd,strSqlVerify;
 	m_edt_usrname.GetWindowText(strUsrName);
 	m_edt_passwd.GetWindowText(strPassWd);
-	if(strPassWd!=_T(""))
+	if(strPassWd!=_T("") && strUsrName!=_T(""))
 	{
-		MessageBox(strPassWd);
+		strSqlVerify.Format(_T("SELECT * FROM usr WHERE usrname=\'%s\' and passwd=\'%s\'"),strUsrName,strPassWd);
+		//strSqlVerify = _T("SELECT * FROM usr");
+		//MessageBox(strSqlVerify);(char *)(LPCTSTR)strSqlVerify
+		MYSQL_RES *result;
+		MYSQL_ROW sql_row;
+		MYSQL_FIELD *fd;
+
+		USES_CONVERSION;//T2CA,unioncode to multibyte.mysql_query can not be unioncode
+		int res=mysql_query(&mysql,T2CA(strSqlVerify));//执行sql命令
+		if(!res)
+		{
+			result=mysql_store_result(&mysql);
+			if(result)
+			{
+				if(mysql_fetch_row(result))
+				{
+					MessageBox(_T("ok"));
+				}
+				else
+				{
+					MessageBox(_T("Username error or Password error!!"));
+
+				}
+				if(result!=NULL) 
+					mysql_free_result(result);
+				
+			}
+			else
+			{
+				MessageBox(_T("sql sentence error!!"));
+
+			}
+		}
+		else
+		{
+			MessageBox(_T("query sql failed!"));
+		}
 	}
 	else
 	{
-		MessageBox(_T("Password can not be blank!"));
+		MessageBox(_T("Username error or Password NO balnk!"));
 	}
+	
+	mysql_close(&mysql);//关闭sql
+
 
 }
