@@ -33,6 +33,8 @@ Target MySQL ---MySQL 5.0.90(or above),more compatible problem need to be solved
 
 3.网页版客户端的构思与windows版本的融合搭建
 
+=======
+
 2014-12-18 1.0.0 Kevin Ou
 
 1.项目初始化,程序架构的设计
