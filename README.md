@@ -1,4 +1,4 @@
-ProMISe
+﻿ProMISe
 =======
 =======
 INFO:
@@ -24,6 +24,15 @@ Target MySQL ---MySQL 5.0.90(or above),more compatible problem need to be solved
 =======
 =======
 
+
+2014-12-22 1.0.1 Kevin Ou
+
+1.Mysql用户表的设计，及从mysql数据库验证合法登录的login逻辑
+
+2.对密码再次加密，题号安全性。并未实施，但验证了MD5的可用性
+
+3.网页版客户端的构思与windows版本的融合搭建
+
 2014-12-18 1.0.0 Kevin Ou
 
 1.项目初始化,程序架构的设计
@@ -31,3 +40,4 @@ Target MySQL ---MySQL 5.0.90(or above),more compatible problem need to be solved
 2.实现了MFC与MySQL的通信检测.
 
 3.login界面的设计.
+
