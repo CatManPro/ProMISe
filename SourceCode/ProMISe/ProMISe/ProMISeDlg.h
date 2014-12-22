@@ -2,6 +2,7 @@
 //
 
 #pragma once
+#include "afxwin.h"
 
 
 // CProMISeDlg dialog
@@ -28,4 +29,9 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedBtnD1Leave();
+	afx_msg void OnBnClickedBtnD1Log();
+	CEdit m_edt_usrname;
+	CEdit m_edt_passwd;
 };

@@ -56,6 +56,8 @@ CProMISeDlg::CProMISeDlg(CWnd* pParent /*=NULL*/)
 void CProMISeDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_EDT_D1_NAME, m_edt_usrname);
+	DDX_Control(pDX, IDC_EDT_D1_PASSW, m_edt_passwd);
 }
 
 BEGIN_MESSAGE_MAP(CProMISeDlg, CDialog)
@@ -63,6 +65,8 @@ BEGIN_MESSAGE_MAP(CProMISeDlg, CDialog)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	//}}AFX_MSG_MAP
+	ON_BN_CLICKED(IDC_BTN_D1_LEAVE, &CProMISeDlg::OnBnClickedBtnD1Leave)
+	ON_BN_CLICKED(IDC_BTN_D1_LOG, &CProMISeDlg::OnBnClickedBtnD1Log)
 END_MESSAGE_MAP()
 
 
@@ -157,3 +161,26 @@ HCURSOR CProMISeDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CProMISeDlg::OnBnClickedBtnD1Leave()
+{
+	// TODO: Add your control notification handler code here
+	OnOK();
+}
+
+void CProMISeDlg::OnBnClickedBtnD1Log()
+{
+	// TODO: Add your control notification handler code here
+	CString strUsrName,strPassWd;
+	m_edt_usrname.GetWindowText(strUsrName);
+	m_edt_passwd.GetWindowText(strPassWd);
+	if(strPassWd!=_T(""))
+	{
+		MessageBox(strPassWd);
+	}
+	else
+	{
+		MessageBox(_T("Password can not be blank!"));
+	}
+
+}
