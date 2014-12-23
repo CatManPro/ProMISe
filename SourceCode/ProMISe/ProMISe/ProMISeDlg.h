@@ -3,7 +3,8 @@
 
 #pragma once
 #include "afxwin.h"
-
+#include "3part/mysql/mysql.h"
+#include "3part/md5/md5.h"
 
 // CProMISeDlg dialog
 class CProMISeDlg : public CDialog
@@ -34,4 +35,6 @@ public:
 	afx_msg void OnBnClickedBtnD1Log();
 	CEdit m_edt_usrname;
 	CEdit m_edt_passwd;
+public:
+	CString encryptMd5(CString rawString);
 };

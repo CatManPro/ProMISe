@@ -1,0 +1,6 @@
+
+	CString sql=_T("123456");//需要加密的字符串
+  　md5.update(sql.GetBuffer());//因为update函数只接收string类型，所以使用getbuffer()函数转换CString为string
+  　CString sqlvalue=md5.toString().c_str();//toString()函数获得加密字符串，c_str();函数重新转换成CString类型
+    MessageBox(sqlvalue);
+	mysql_close(&mysql);//关闭sql

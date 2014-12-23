@@ -52,7 +52,7 @@
 
 #include <afxsock.h>		// MFC socket extensions
 
-#include "3part/mysql/mysql.h"
+
 #include "winsock.h"
 #pragma comment(lib,"3part/mysql/libmySQL.lib")
 

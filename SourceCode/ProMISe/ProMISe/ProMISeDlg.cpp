@@ -9,7 +9,9 @@
 #define new DEBUG_NEW
 #endif
 
+
 MYSQL mysql; //数据库连接句柄
+MD5 md5;    //定义MD5的类
 
 // CAboutDlg dialog used for App About
 
@@ -172,6 +174,7 @@ void CProMISeDlg::OnBnClickedBtnD1Leave()
 
 void CProMISeDlg::OnBnClickedBtnD1Log()
 {
+	USES_CONVERSION;//T2CA,unioncode to multibyte.mysql_query can not be unioncode
 	// TODO: Add your control notification handler code here
 	mysql_init (&mysql);
 	if(!mysql_real_connect(&mysql,"localhost","root","roottoor","promise",3306,NULL,0))
@@ -183,14 +186,17 @@ void CProMISeDlg::OnBnClickedBtnD1Log()
 	m_edt_passwd.GetWindowText(strPassWd);
 	if(strPassWd!=_T("") && strUsrName!=_T(""))
 	{
-		strSqlVerify.Format(_T("SELECT * FROM usr WHERE usrname=\'%s\' and passwd=\'%s\'"),strUsrName,strPassWd);
+		md5.reset();
+		md5.update(strPassWd.GetBuffer());//因为update函数只接收string类型，所以使用getbuffer()函数转换CString为string
+		CString strMd5Pass=md5.toString().c_str();//toString()函数获得加密字符串，c_str();函数重新转换成CString类型
+		strSqlVerify.Format(_T("SELECT * FROM usr WHERE usrname=\'%s\' and passwd=\'%s\'"),strUsrName,strMd5Pass);
 		//strSqlVerify = _T("SELECT * FROM usr");
 		//MessageBox(strSqlVerify);(char *)(LPCTSTR)strSqlVerify
 		MYSQL_RES *result;
 		MYSQL_ROW sql_row;
 		MYSQL_FIELD *fd;
 
-		USES_CONVERSION;//T2CA,unioncode to multibyte.mysql_query can not be unioncode
+		
 		int res=mysql_query(&mysql,T2CA(strSqlVerify));//执行sql命令
 		if(!res)
 		{
@@ -225,8 +231,18 @@ void CProMISeDlg::OnBnClickedBtnD1Log()
 	{
 		MessageBox(_T("Username error or Password NO balnk!"));
 	}
-	
+    
+  
 	mysql_close(&mysql);//关闭sql
+}
 
 
+CString CProMISeDlg::encryptMd5(CString rawString)
+{
+	md5.reset();
+	md5.update(rawString.GetBuffer());//因为update函数只接收string类型，所以使用getbuffer()函数转换CString为string
+	CString md5String=md5.toString().c_str();//toString()函数获得加密字符串，c_str();函数重新转换成CString类型
+    //MessageBox(md5String);
+	//fprintf(stderr,"md5:%s\\n",md5String);
+	return md5String;
 }
