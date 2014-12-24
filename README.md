@@ -25,7 +25,7 @@ Target MySQL ---MySQL 5.0.90(or above),more compatible problem need to be solved
 =======
 
 
-2014-12-22 1.0.1 Kevin Ou
+2014-12-24 1.0.1 Kevin Ou
 
 1.Mysql用户表的设计，及从mysql数据库验证合法登录的login逻辑
 
