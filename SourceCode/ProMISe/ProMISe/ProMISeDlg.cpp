@@ -232,7 +232,8 @@ void CProMISeDlg::OnBnClickedBtnD1Log()
 		MessageBox(_T("Username error or Password NO balnk!"));
 	}
     
-  
+	CString str = encryptMd5("roottoor");
+	MessageBox(str);
 	mysql_close(&mysql);//¹Ø±Õsql
 }
 

@@ -96,6 +96,13 @@ BEGIN
     PUSHBUTTON      "Leave",IDC_BTN_D1_LEAVE,224,128,50,14
 END
 
+IDD_DIALOG_MAIN DIALOGEX 0, 0, 372, 187
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -158,6 +165,14 @@ BEGIN
         RIGHTMARGIN, 401
         TOPMARGIN, 7
         BOTTOMMARGIN, 206
+    END
+
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 365
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 180
     END
 END
 #endif    // APSTUDIO_INVOKED
